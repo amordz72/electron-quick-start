@@ -1,0 +1,47 @@
+:root {
+    --border: 1px black solid;
+    --borderGr: 2px rgb(93, 190, 28) solid;
+  }
+  #title {
+    background-color: #eee;
+  }
+  .state {
+    border: solid 1px rgb(204, 204, 204);
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+  }
+  .info {
+    flex: 2;
+  }
+  .icon {
+    padding-top: 35px;
+    padding-right: 10px;
+  }
+  .state #txt {
+    display: block;
+    font-size: 30px;
+  }
+  .state #num {
+    font-size: 40px;
+    padding-right: 0;
+  }
+  .state #ic {
+    font-size: 40px;
+    padding-left: 0;
+  }
+  .lang {
+    background-color: #7cbde9;
+  }
+  .prod {
+    background-color: #2ecc71;
+  }
+  .buy {
+    background-color: #e74c3c;
+  }
+  .sel {
+    background-color: #e67e22;
+  }
+  

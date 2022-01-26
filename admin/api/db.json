@@ -1,0 +1,30 @@
+{
+    "url": "http://localhost/*/admin/api/action_db.php",
+    "visible_addCol": true,
+    "cbx": [
+        "text",
+        "checkbox",
+        "number",
+        "date",
+        "password",
+        "select",
+        "textarea",
+        "datetime-local",
+        "email",
+        "color",
+        "file",
+        "hidden",
+        "image",
+        "month",
+        "reset",
+        "button",
+        "radio",
+        "range",
+        "search",
+        "submit",
+        "tel",
+        "time",
+        "url",
+        "week"
+    ]
+}

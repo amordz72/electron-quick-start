@@ -1,22 +1,38 @@
 {
-  "name": "electron-quick-start",
+  "name": "formCretedVue3",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
-  "main": "main.js",
+  "description": "",
+  "main": "main_electron.js",
   "scripts": {
-    "start": "electron ."
+    "rug-gulp-tasks": "gulp",
+    "test": "gulp -T",
+    "am_zip": "node rar zip('index.html','index.html.gz')",
+    "help": "gulp -help",
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ele_fc\"",
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Amor lembarki",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^13.1.7",
+    "electron-dev": "^1.0.1",
+    "gulp-livereload": "^4.0.2",
+    "serialport": "^9.2.1"
+  },
   "devDependencies": {
-    "electron": "^16.0.7"
+    "electron-packager": "^15.3.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-html2pug": "^3.0.3",
+    "gulp-plugin": "0.0.18",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "pug": "^3.0.2",
+    "sass": "^1.38.1"
   }
 }

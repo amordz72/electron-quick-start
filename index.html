@@ -1,19 +1,80 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+<html lang="ar" dir="rtl" id="pg">
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Creature</title>
+
+    <link rel="stylesheet" id="b_css" href="./admin/layout/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./admin/layout/css/all.min.css" />
+    <link rel="stylesheet" href="./admin/css/login.css" />
+</head>
+
+<body>
+    <div id="app" class="container-fluid">
+        <div class="container">
+
+
+
+
+            <div class="form-signin bg-light text-center g-2 px-3">
+                <form @submit.prevent='handelSubmit'>
+                    <img class="mb-4" src="./admin/images/login/CF_Mark.jpg" alt="" width="72">
+                    <!--<h1 class="h3 mb-3 fw-normal">Please sign in</h1>-->
+                    <h1 class="h3 mb-3 fw-normal">الدخول العادي للنظام</h1>
+
+                
+                    <div class="form-floating">
+                        <input class="form-control" id="floatingInput" placeholder="name" v-model="user_name">
+                        <label for="floatingInput">user name</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                            v-model="user_pw">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                  <!-- 
+                      <button class="w-100 btn btn-lg btn-dark" type="submit" @click="login">Sign in</button>
+                    -->
+           <button class="w-100 btn btn-lg btn-dark" type="submit"> 
+               <a href="./views/dashbord.html">دخول</a> </button>
+  
+  
+  
+                    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+                </form>
+            </div>
+            <div class="alert alert-primary" role="alert" v-show="show_msg">
+                {{msg}}
+            </div>
+
+
+
+        </div>
+    </div>
+    
+   
+
+  <script src="./admin/layout/js/vue3.js"></script>
+    <script src="./admin/layout/js/axios.min.js"></script>
+  
+  <!--<script src="./admin/layout/js/popper.rtl.min.js"></script>
+    <script src="./admin/layout/js/myTools.js"></script> -->
+  
+
+    <script src="./admin/js/loginApp.js"></script>
+ 
+
+ 
+</body>
+
 </html>

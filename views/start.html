@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dashboard</title>
+
+    <link rel="stylesheet" id="b_css" href="../admin/layout/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../admin/layout/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/dashbord.css" />
+
+</head>
+
+<body>
+    <div id="app" class="container-fluid">
+        <!-- S navbar 
+        <navbar-v1></navbar-v1>-->
+        <!-- E navbar -->
+
+        <div class="container">
+            <div class="row my-3">
+                <!-- col-4 -->
+                <div class="col-md-4 ">
+
+                    <!-- projectDir -->
+                    <div class="row"> <label class="form-label col-4">Project Dir: </label>
+
+                        <div class="  col-8">
+                            <input type="text" v-model='projectDir' class="form-control">
+                        </div>
+                    </div>
+                    <!-- project -->
+                    <div class="row">
+                        <label class="form-label col-4">Project: </label>
+
+                        <div class="  col-8">
+                            <input type="text" v-model='projectName' class="form-control">
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <button class="btn btn-info" @click='NewProject'>NewProject</button>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="col-md-8 ">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                        </li>
+                        <li class="nav-item" role="presentation" v-if="ather!=''">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                type="button" role="tab" aria-controls="profile" aria-selected="false">Ather</button>
+                        </li>
+                        <li class="nav-item" role="presentation" v-if="false">
+                            <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+                                type="button" role="tab" aria-controls="messages"
+                                aria-selected="false">Messages</button>
+                        </li>
+                        <li class="nav-item" role="presentation" v-if="false">
+                            <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings"
+                                type="button" role="tab" aria-controls="settings"
+                                aria-selected="false">Settings</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+
+                        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <textarea v-model='body' cols="30" rows="10" class="form-control  ">
+                        </textarea>
+                        </div>
+
+                        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <textarea v-model='ather' cols="30" rows="10" class="form-control  ">
+                        </textarea>
+                        </div>
+                        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
+                        <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <script src="../admin/layout/js/bootstrap.min.js"></script>
+    <script src="../admin/layout/js/popper.min.js"></script> -->
+    <script src="../admin/layout/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../admin/layout/js/axios.min.js"></script>
+    <script src="../admin/layout/js/vue3.js"></script>
+
+    <script src="./assets/js/start_App.js"></script>
+
+
+
+    <script>
+        var firstTabEl = document.querySelector('#myTab li:last-child a')
+        var firstTab = new bootstrap.Tab(firstTabEl)
+
+        firstTab.show()
+    </script>
+
+</body>
+
+</html>

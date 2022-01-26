@@ -1,0 +1,12 @@
+.ltr{
+    direction: ltr;
+ 
+}
+#p_code{
+    
+    color: black;
+    font-size: large;
+    overflow-y: scroll;
+    /* max-height: 500px; */
+
+}

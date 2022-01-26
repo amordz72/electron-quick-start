@@ -1,0 +1,74 @@
+:root {
+    --btn-x: 7px;
+    --btn-y: 5px;
+  
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0)
+    );
+  }
+  
+  .btn {
+    margin: 2px;
+    padding: var(--btn-y) var(--btn-x);
+    /* font-weight: 500; */
+  }
+  #code {
+    text-align: left;
+    direction: ltr;
+  }
+  .cir {
+    width: 25px;
+    height: 25px;
+    border: 3px rgb(246, 5, 5) solid;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin: 2px;
+    background-color: #eee;
+  }
+  .cir span {
+    color: black;
+    font: size 22px;
+    font-weight: 700;
+  }
+  .btn-sport {
+    background-color: #2b2b52 !important;
+    color: white !important;
+  }
+  .ltr * {
+    direction: ltr;
+  }
+  .rtl * {
+    direction: rtl;
+  }
+  
