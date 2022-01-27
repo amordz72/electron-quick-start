@@ -8,7 +8,7 @@
     <title>dashboard</title>
 
     <link rel="stylesheet" id="b_css" href="../admin/layout/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../admin/layout/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="../admin/layout/css/all.min.css" /> -->
     <link rel="stylesheet" href="./assets/css/dashbord.css" />
 
 </head>
@@ -25,24 +25,34 @@
                 <div class="col-md-4 ">
 
                     <!-- projectDir -->
-                    <div class="row"> <label class="form-label col-4">Project Dir: </label>
+                    <div class="row">
+                         <label class="form-label col-4">Project Dir: 
+                              </label> 
+                               <div class="  col-8">
+                            <input type="text" v-model='projectDir'
+                            @change="setItem('projectDir',projectDir)"
+                            class="form-control">
+                        </div>  
+                     
 
-                        <div class="  col-8">
-                            <input type="text" v-model='projectDir' class="form-control">
-                        </div>
+                       
                     </div>
                     <!-- project -->
                     <div class="row">
                         <label class="form-label col-4">Project: </label>
 
                         <div class="  col-8">
-                            <input type="text" v-model='projectName' class="form-control">
+                            <input type="text" v-model='projectName'
+                            @change="setItem('projectName',projectName)"
+                            class="form-control">
                         </div>
                     </div>
 
 
-                    <div>
-                        <button class="btn btn-info" @click='NewProject'>NewProject</button>
+                    <div class="my-2">
+                        <button class="btn btn-info mx-1" @click='NewProject'>NewProject</button>
+                        <button class="btn btn-info mx-1" @click='NewProject'>NewProject</button>
+                        <button class="btn btn-secondary mx-1" @click='clear'>Clear</button>
                     </div>
                 </div>
                 <!-- 8 -->
@@ -71,12 +81,12 @@
                     <div class="tab-content">
 
                         <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <textarea v-model='body' cols="30" rows="10" class="form-control  ">
+                            <textarea v-model='body' cols="30" rows="10" class="form-control  fw-bold text-dark  ">
                         </textarea>
                         </div>
 
                         <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <textarea v-model='ather' cols="30" rows="10" class="form-control  ">
+                            <textarea v-model='ather' cols="30" rows="20" class="form-control fw-bold text-dark ">
                         </textarea>
                         </div>
                         <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
@@ -93,10 +103,10 @@
 
     </div>
 
-    <!-- <script src="../admin/layout/js/bootstrap.min.js"></script>
-    <script src="../admin/layout/js/popper.min.js"></script> -->
-    <script src="../admin/layout/js/bootstrap.bundle.min.js"></script>
-
+    <!--
+    <script src="../admin/layout/js/popper.min.js"></script>
+    <script src="../admin/layout/js/bootstrap.bundle.min.js"></script> -->
+ <script src="../admin/layout/js/bootstrap.min.js"></script>
     <script src="../admin/layout/js/axios.min.js"></script>
     <script src="../admin/layout/js/vue3.js"></script>
 
